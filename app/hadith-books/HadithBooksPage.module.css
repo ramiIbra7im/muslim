@@ -1,0 +1,43 @@
+.container {
+    background-color: #f8fffd;
+}
+
+.customGreen {
+    color: #52AA99 !important;
+}
+
+.customGreenBorder {
+    border: 2px solid #52AA99 !important;
+    border-radius: 12px !important;
+}
+
+.customGreenBtn {
+    background-color: #52AA99 !important;
+    border-color: #52AA99 !important;
+    color: #fff !important;
+    border-radius: 10px !important;
+    transition: all 0.3s;
+}
+
+.customGreenBtn:hover {
+    background-color: #1c725f !important;
+    border-color: #459785 !important;
+}
+
+.customGreenOutlineBtn {
+    color: #52AA99 !important;
+    border: 2px solid #52AA99 !important;
+    background: #fff !important;
+    border-radius: 8px !important;
+}
+
+.customGreenOutlineBtn:hover {
+    background-color: #52AA99 !important;
+    color: #fff !important;
+}
+
+.hadithCard {
+    border-radius: 14px !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}

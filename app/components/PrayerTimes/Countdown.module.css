@@ -1,0 +1,43 @@
+.countdownCard {
+    /* background: linear-gradient(135deg, #f8fff8, #e8f5e9); */
+        background-color: white;
+    /* أخضر فاتح مريح */
+    border-radius: 1.25rem;
+    border: none;
+}
+
+
+
+.cardContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.profileImage {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #52AA99;
+}
+
+.textSection {
+    flex-grow: 1;
+    color: #52AA99;
+}
+
+.iconWrapper {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 8px auto;
+    background: #52AA9920;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mosqueIcon {
+    color: #2e5f3e;
+}

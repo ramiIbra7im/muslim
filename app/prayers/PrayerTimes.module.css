@@ -1,0 +1,65 @@
+.prayerPage {
+    background-color: #F8FFFD;
+    padding-top: 4rem;
+}
+
+.locationCard {
+    background-color: white;
+    color: #52AA99;
+    transition: all 0.3s ease;
+}
+
+.locationCard:hover {
+    background: linear-gradient(90deg, #c8ffd0 0%, #f4fff0 100%);
+    transform: translateY(-3px);
+}
+
+.timePrayer {
+    background-color: white;
+    color: #52AA99;
+    border-right: 6px solid #18a999;
+    transition: all 0.3s ease;
+}
+
+.timePrayer:hover {
+    background: linear-gradient(90deg, #c8ffd0 0%, #f4fff0 100%);
+    transform: scale(1.02);
+}
+
+.prayerCard {
+    background-color: #ffffff;
+    border: 1px solid #d9f7d9;
+    border-radius: 12px;
+}
+
+.prayerTitle {
+    color: #18a999;
+    font-weight: bold;
+}
+
+.heroImage {
+    max-width: 70%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.locationCard {
+    position: relative;
+}
+
+.iconCircle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #52AA9920;
+    /* background-color: #28a745; */
+    /* أخضر موحد */
+    color: #3F8755;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}

@@ -1,0 +1,58 @@
+.containerCustom {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.cardCustom {
+    border: none;
+    border-radius: 0.85rem;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    background: #ffffff;
+}
+
+.cardCustom:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* عنوان الكارت */
+.cardHeader {
+    position: relative;
+    background: linear-gradient(135deg, #00695c 0%, #26a69a 100%);
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+.cardNumber {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 0.25rem 0.55rem;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.cardTitle {
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin: 0;
+    font-family: "Amiri", serif;
+}
+
+/* جسم النص */
+.cardBodyCustom {
+    padding: 1rem 1.2rem;
+    background: linear-gradient(135deg, #fdfcfb 0%, #f0f0f0 100%);
+}
+
+.cardText {
+    color: #333;
+    font-size: 1rem;
+    margin: 0;
+}

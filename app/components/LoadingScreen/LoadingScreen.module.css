@@ -1,0 +1,111 @@
+/* تغطية الشاشة */
+.overlay {
+    z-index: 2000;
+    backdrop-filter: blur(3px);
+}
+
+/* الهالة/الدائرة الأساسية */
+.halo {
+    width: 160px;
+    height: 160px;
+    position: relative;
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow:
+        0 0 0 6px rgba(255, 255, 255, 0.03) inset,
+        0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* الهلال */
+.crescent {
+    filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.4));
+}
+
+/* المسبحة: إطار وهمي تدور عليه الخرز */
+.beads {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 140px;
+    height: 140px;
+    border: 2px dashed currentColor;
+    border-radius: 50%;
+    opacity: 0.12;
+    animation: spin 8s linear infinite;
+}
+
+/* كل خرزة */
+.bead {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transform-origin: center -56px;
+    /* يضبط مسار الدوران */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.35), 0 0 12px currentColor;
+    opacity: 0.9;
+}
+
+/* نص الذكر */
+.dhikr {
+    font-size: 1.05rem;
+    letter-spacing: 0.2px;
+    animation: fadeInOut 1.6s ease-in-out infinite;
+}
+
+/* شريط التقدم */
+.progressBar {
+    width: 12%;
+    animation: loadSlide 1.6s ease-in-out infinite;
+    border-radius: 999px;
+}
+
+/* أنيميشنات */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeInOut {
+
+    0%,
+    100% {
+        opacity: 0.35;
+        transform: translateY(2px);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes loadSlide {
+    0% {
+        width: 5%;
+        transform: translateX(0);
+    }
+
+    50% {
+        width: 65%;
+        transform: translateX(30%);
+    }
+
+    100% {
+        width: 5%;
+        transform: translateX(0);
+    }
+}
+
+/* تقليل الحركة لذوي الحساسية */
+@media (prefers-reduced-motion: reduce) {
+
+    .beads,
+    .dhikr,
+    .progressBar {
+        animation: none !important;
+    }
+}

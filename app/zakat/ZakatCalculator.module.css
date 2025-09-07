@@ -1,0 +1,132 @@
+.container {
+    background-color: #F8FFFD;
+    transition: 0.8s;
+}
+
+.containerBox {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.title {
+    text-align: center;
+    color: #c59d5f;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.tabGroup {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.tabBtn {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fafafa;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+}
+
+.tabBtn:hover {
+    background: #f0f0f0;
+}
+
+/* ZakatCalculator.module.css */
+
+/* الزر النشط */
+.activeBtn {
+    background-color: #c59d5f;
+    color: #ffffff;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.activeBtn:hover {
+    background-color: #a07d4f;
+    /* درجة أغمق عند الهام hover */
+}
+
+/* زر غير نشط */
+.btnOutlineCustom {
+    border: 1px solid #c59d5f;
+    color: #c59d5f;
+    background-color: transparent;
+    transition: all 0.3s;
+}
+
+.btnOutlineCustom:hover {
+    background-color: #a07d4f;
+    color: #ffffff;
+}
+
+.sectionTitle {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #444;
+    margin: 1rem 0;
+}
+
+.sectionTitle::before,
+.sectionTitle::after {
+    content: "";
+    flex: 1;
+    border-bottom: 2px solid #ddd;
+    margin: 0 10px;
+}
+
+.form-label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.input {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 10px 12px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, background-color 0.3s ease, transform 0.5s ease;
+    background-color: #f4fff0;
+    outline: none;
+    transform: translateY(0);
+}
+
+.input:focus {
+    border-color: #52AA99;
+    background: linear-gradient(90deg, #c8ffd0 0%, #f4fff0 100%);
+    transform: translateY(-5px);
+}
+
+.calcBtn {
+    background-color: #52AA99;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background 0.5s ease;
+}
+
+.calcBtn:hover {
+    background-color: #5fc4af;
+    color: white;
+}
+
+.resultBox {
+    border: 1px solid #dee2e6;
+    background-color: #f8f9fa;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    margin-top: 1.5rem;
+}

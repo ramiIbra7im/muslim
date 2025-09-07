@@ -1,0 +1,17 @@
+/* الصناديق الداخلية */
+.currentLocation {
+    background-color: #D9F7C7;
+    /* أخضر فاتح */
+    color: #1C2E1F;
+    /* نص داكن للوضوح */
+    border-radius: 8px;
+    padding: 8px 12px;
+}
+
+.timePrayer {
+    background: linear-gradient(135deg, #2E4A37 0%, #1C2E1F 80%);
+    /* مثل الـ sidebar */
+    color: #E9FFD9;
+    border-radius: 8px;
+    padding: 8px 12px;
+}

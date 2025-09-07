@@ -1,0 +1,25 @@
+.wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+/* محتوى الصفحة */
+.mainContent {
+    flex-grow: 1;
+    transition: margin 0.3s;
+    margin-right: 220px;
+    /* فقط للديسكتوب */
+}
+
+/* شاشات صغيرة */
+@media (max-width: 767px) {
+    .wrapper {
+        flex-direction: column;
+        /* المحتوى تحت بعض */
+    }
+
+    .mainContent {
+        margin-right: 0;
+        /* كامل العرض */
+    }
+}

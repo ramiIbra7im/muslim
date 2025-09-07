@@ -1,0 +1,126 @@
+.quranLayout {
+    height: 100vh;
+    background: #fafafa;
+}
+
+.sidebar {
+    background: #fff;
+    border-right: 1px solid #ddd;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    overflow-y: auto;
+}
+
+.content {
+    background: #fafafa;
+    height: 100vh;
+    /* يثبت ارتفاع العمود */
+    overflow-y: auto;
+    /* Scroll خاص بالمحتوى */
+    text-align: right;
+}
+
+.surahItem {
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    color: #333;
+}
+
+.surahItem:hover {
+    background: #f0f0f0;
+}
+
+.activeSurah {
+    background: #c59d5f;
+    color: #fff !important;
+    font-weight: bold;
+}
+
+/* منطقة العرض */
+.content {
+    text-align: right;
+    color: #333;
+}
+
+.placeholder {
+    color: #777;
+}
+
+/* اسم السورة */
+.surahName {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* البسملة */
+.basmala {
+    font-size: 1.4rem;
+    color: #c59d5f;
+    font-weight: bold;
+    font-family: "Amiri Quran", serif;
+}
+
+/* نص الآيات */
+.ayahContainer {
+    direction: rtl;
+    text-align: justify;
+    line-height: 3rem;
+    font-size: 1.4rem;
+    /* padding: 0 1rem; */
+    text-align-last: right;
+    font-family: "Amiri Quran";
+}
+
+.ayah {
+    display: inline;
+    margin: 0 0.25rem;
+}
+
+.ayahNumber {
+    color: #c59d5f;
+    font-weight: bold;
+    margin: 0 0.15rem;
+    font-size: 1.3rem;
+}
+
+.surahItem {
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    color: #333;
+}
+
+.surahItem:hover {
+    background: #f0f0f0;
+    transform: scale(1.02);
+}
+
+.activeSurah {
+    background: #c59d5f !important;
+    color: #fff !important;
+    font-weight: bold;
+    border: 1px solid #c59d5f !important;
+}
+
+.nav {
+    background-color: #FAFAFA;
+}
+
+/* QuranViewer.module.css */
+.audioButton {
+    background-color: #52AA99;
+    /* اللون الأساسي اللي تستخدمه للموقع */
+    color: white;
+    /* نص أبيض مثلاً */
+    border: none;
+}
+
+.audioButton:hover {
+    background: linear-gradient(90deg, #c8ffd0 0%, #52AA99 100%);
+
+    transition: 0.5s all ease;
+    color: white;
+}
+
