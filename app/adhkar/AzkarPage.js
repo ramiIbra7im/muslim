@@ -171,7 +171,7 @@ export default function AzkarPage({ type }) {
                                     <h3 className={`${styles.textAzkar} card-text lh-lg`}>{text}</h3>
 
                                     {description && (
-                                        <div className="rounded-3 p-1 badge shadow-sm">
+                                        <div className="rounded-3 p-1  shadow-sm">
                                             <p className="mb-0 text-secondary lh-lg">{description}</p>
                                         </div>
                                     )}
