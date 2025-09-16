@@ -166,15 +166,15 @@ export default function ZakatCalculator() {
                                     onChange={(e) => setAgriKg(e.target.value)}
                                 />
                             </div>
-                            <div className="col-6  ">
+                            <div className="col-12  ">
                                 <input
                                     type="checkbox"
                                     id="irrigated"
-                                    className="m-2 p-4 "
+                                    className="m-2 p-4 col "
                                     checked={agriIrrigated}
                                     onChange={(e) => setAgriIrrigated(e.target.checked)}
                                 />
-                                <label htmlFor="irrigated" className="form-check-label">
+                                <label htmlFor="irrigated" className="form-check-label col">
                                     طريقة الري: صناعي  5%
                                 </label>
                             </div>
