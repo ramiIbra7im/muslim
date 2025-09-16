@@ -5,7 +5,7 @@
 
 .locationCard {
     background-color: white;
-    color: #52AA99;
+    color: #347060;
     transition: all 0.3s ease;
 }
 
@@ -16,7 +16,7 @@
 
 .timePrayer {
     background-color: white;
-    color: #52AA99;
+    color: #347060;
     border-right: 6px solid #18a999;
     transition: all 0.3s ease;
 }

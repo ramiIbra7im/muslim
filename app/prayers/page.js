@@ -4,6 +4,7 @@ import Countdown from "../components/PrayerTimes/Countdown";
 import LocationSearch from "../components/PrayerTimes/LocationSearch";
 import styles from "./PrayerTimes.module.css";
 import LoadingScreen from "../components/LoadingScreen/LoadingScreen";
+import Notification from '../components/Notifications/Notifications'
 import { FaCity, FaClock, FaCalendarAlt, FaMoon, FaCloudMoon, FaSun, FaCloudSun } from "react-icons/fa";
 
 export default function PrayerTimes() {
@@ -168,6 +169,7 @@ export default function PrayerTimes() {
 
     return (
         <div className={`min-vh-100 ${styles.prayerPage}`} dir="rtl">
+            <Notification times={times} />
 
             {currentLocation.city && (
                 <div className="row g-3 m-auto">

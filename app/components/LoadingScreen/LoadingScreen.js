@@ -84,15 +84,7 @@ export default function LoadingScreen({
                     <div className={`${styles.dhikr} opacity-75`}>{dhikr[idx]}</div>
                 </div>
 
-                {/* شريط تقدم بسيط */}
-                {/* <div className="mt-4 mx-auto" style={{ maxWidth: 260 }}>
-                    <div className="progress bg-dark" style={{ height: 6, borderRadius: 999 }}>
-                        <div
-                            className={styles.progressBar}
-                            style={{ backgroundColor: color }}
-                        />
-                    </div>
-                </div> */}
+
 
             </div>
         </div>

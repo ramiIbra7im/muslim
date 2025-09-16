@@ -1,5 +1,6 @@
 .container {
     background-color: #f8fffd;
+
 }
 
 .customGreen {
@@ -40,4 +41,9 @@
     border-radius: 14px !important;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
+    font-weight: 400;
+}
+
+.content {
+    font-family: "Amiri Quran", serif;
 }

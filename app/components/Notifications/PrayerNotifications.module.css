@@ -1,0 +1,75 @@
+.prayerModalDialog {
+    max-width: 55%;
+    width: 55%;
+}
+
+.prayerModalBody {
+    background: url("/islamic.png"), linear-gradient(135deg, #0d1b2a, #1b4332);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 500px;
+    /* ارتفاع أكبر للمودال */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.star {
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation-name: moveStar;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes moveStar {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(var(--x), -550px);
+        opacity: 0;
+    }
+}
+
+.content {
+    position: relative;
+    z-index: 3;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.text {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.modalFooterButton {
+    margin: 0 5px;
+}

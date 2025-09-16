@@ -1,7 +1,7 @@
 /* الديسكتوب */
 .sidebar {
     width: 220px;
-    background-color: #18a999;
+    background-color: #347060;
     min-height: 100vh;
     color: #FDFEFE;
     display: flex;
@@ -17,8 +17,6 @@
 .title {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #F39C12;
-    margin-bottom: 2rem;
 }
 
 .navLink {

@@ -1,54 +1,77 @@
+.main {
+    background-color: #F8FFFD;
+}
+
 .tasbeehCard {
-    background-color: #f8fff5;
-    /* أخضر فاتح للكارت */
+    background-color: #ffffff;
     border-radius: 20px;
     transition: all 0.3s ease;
 }
 
-.tasbeehCard:hover {
+/* .tasbeehCard:hover {
     background-color: #e8ffe0;
     transform: translateY(-3px);
-}
+} */
 
 .inputZekr {
     border: 2px solid #18a999;
     border-radius: 12px;
     text-align: center;
+    transition: 0.5s;
 }
 
 .inputZekr:focus {
     box-shadow: none;
     border: #27ae60 1px solid;
+    transition: 0.5s;
 }
 
 .counterCircle {
     width: 150px;
     height: 150px;
-    background: #18a999;
-    /* أخضر داكن */
+    background: linear-gradient(135deg, #18a999, #27ae60);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+}
+
+.pulse {
+    animation: pulseAnim 0.3s ease;
+}
+
+@keyframes pulseAnim {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .btnGreen {
-    background-color: #27ae60;
+    background-color: #52AA99;
     color: #fff;
     border: none;
     transition: all 0.2s;
 }
 
 .btnGreen:hover {
-    background-color: #2ecc71;
+    background-color: #307769;
     transform: scale(1.05);
 }
 
 .btnRed {
-    background-color: #e74c3c;
+    background: linear-gradient(135deg, #18a999, #27ae60);
     color: #fff;
     border: none;
     transition: all 0.2s;
 }
 
 .btnRed:hover {
-    background-color: #ff6666;
+    background: linear-gradient(135deg, #27ae60, #18a999);
     transform: scale(1.05);
 }

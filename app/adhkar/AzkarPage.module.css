@@ -1,22 +1,28 @@
-/* .customGreen {
-    color: #52AA99 !important;
-} */
+.azkar-main {
+    background-color: #F8FFFD;
+}
 
 .cardCustom {
-    border: 2px solid #52AA99 !important;
     border-radius: 14px !important;
     padding: 20px !important;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    /* transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.5s; */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.5s;
     cursor: pointer;
     color: #52AA99;
+    background-color: white;
 
+}
+
+.textAzkar {
+    font-family: 'El_Messiri';
+    font-weight: 600;
 }
 
 .cardCustom:hover {
     transform: translateY(-4px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    background-color: #52AA99;
-    color: #ffff;
+    /* background-color: #52AA99; */
+    background: linear-gradient(90deg, #c8ffd0 0%, #f4fff0 100%);
+    color: #52AA99;
     transition: all 0.5s;
+    border: none;
 }

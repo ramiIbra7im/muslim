@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import toast, { Toaster } from "react-hot-toast";
 import LoadingScreen from "../components/LoadingScreen/LoadingScreen";
-import styles from "./AzkarPage.module.css";
 import HeroSection from "../components/HeroSection";
+import styles from "./AzkarPage.module.css";
 
 export default function AzkarPage({ type }) {
     const [items, setItems] = useState([]);
@@ -14,7 +14,8 @@ export default function AzkarPage({ type }) {
     const [finishedIdx, setFinishedIdx] = useState(null);
     const [title, setTitle] = useState("");
 
-    const jsonUrl = "https://raw.githubusercontent.com/rn0x/Adhkar-json/main/adhkar.json";
+    const jsonUrl =
+        "https://raw.githubusercontent.com/wdalgrb/azkar-api/main/azkar.json";
 
     useEffect(() => {
         setLoading(true);
@@ -24,11 +25,10 @@ export default function AzkarPage({ type }) {
         fetch(jsonUrl)
             .then((r) => r.json())
             .then((data) => {
-                const decodedType = decodeURIComponent(type || ""); // نفك تشفير الرابط
+                const decodedType = decodeURIComponent(type || "");
+                const categoryData = data[decodedType];
 
-                const categoryExists = data.find((item) => item.category === decodedType)?.category;
-
-                if (!categoryExists) {
+                if (!categoryData) {
                     setItems([]);
                     setCounts({});
                     setTitle("غير موجود");
@@ -36,10 +36,34 @@ export default function AzkarPage({ type }) {
                     return;
                 }
 
-                setTitle(categoryExists);
+                setTitle(decodedType);
 
-                const selected = data.filter((item) => item.category === categoryExists);
-                const allDhikr = selected.flatMap((item) => item.array ?? []);
+                let allDhikr = [];
+                categoryData.forEach((group) => {
+                    if (Array.isArray(group)) {
+                        group.forEach((item) => {
+                            if (!item) return;
+                            if (item.content) {
+                                let content = cleanText(item.content);
+                                let description = cleanText(item.description ?? "");
+                                if (content) allDhikr.push({ ...item, content, description });
+                            } else if (typeof item === "string") {
+                                let content = cleanText(item);
+                                if (content) allDhikr.push({ content, description: "" });
+                            }
+                        });
+                    } else if (typeof group === "object" && group !== null) {
+                        if (group.content) {
+                            let content = cleanText(group.content);
+                            let description = cleanText(group.description ?? "");
+                            if (content) allDhikr.push({ ...group, content, description });
+                        }
+                    } else if (typeof group === "string") {
+                        let content = cleanText(group);
+                        if (content) allDhikr.push({ content, description: "" });
+                    }
+                });
+
                 setItems(allDhikr);
 
                 const initialCounts = allDhikr.reduce((acc, z, i) => {
@@ -60,6 +84,17 @@ export default function AzkarPage({ type }) {
 
         return () => clearTimeout(timeout);
     }, [type]);
+
+    const cleanText = (txt) =>
+        String(txt)
+            .replace(/\\n/g, "\n")
+            .replace(/\[.*?\]/g, "")
+            .replace(/(^['",\s]+)|(['",\s]+$)/g, "")
+            .replace(/\.{2,}/g, "")
+            .replace(/["“”]+/g, "")
+            .replace(/(^\s+|\s+$)/g, "")
+            .replace(/stop/, "")
+            .trim();
 
     const copyToClipboard = async (text) => {
         try {
@@ -105,10 +140,8 @@ export default function AzkarPage({ type }) {
             <HeroSection title={title} />
             <div className={`${styles["azkar-main"]} container py-3`} dir="rtl">
                 <Toaster position="top-center" />
-
-                {/* Breadcrumbs */}
                 <nav aria-label="breadcrumb" className="mb-4">
-                    <ol className="breadcrumb  p-2 rounded ">
+                    <ol className="breadcrumb p-2 rounded">
                         <li className="breadcrumb-item">
                             <Link href="/adhkar" className="text-decoration-none text-primary fw-bold">
                                 الرئيسية
@@ -125,21 +158,25 @@ export default function AzkarPage({ type }) {
                     </ol>
                 </nav>
 
-
-                <h1 className="text-center mb-4 mt-3 fw-bold"></h1>
-
                 <div className="d-flex flex-column align-items-center">
                     {items.map((z, idx) => {
-                        const text = z?.text ?? "";
+                        const text = z?.content ?? "";
+                        const description = z?.description ?? "";
                         const current = counts[idx] ?? 1;
+                        const reference = z?.reference ?? "";
 
                         return (
-                            <div key={idx} className={`card shadow mb-4 col-sm-10 rounded-3 p-3 ${styles.azkarCard}`}>
-                                <div className="card-body">
-                                    <h4 className={`${styles.textAzkar} card-text lh-lg`}>{text}</h4>
+                            <div key={idx} className={`card shadow mb-4 col-sm-12 rounded-3 col-lg-10 p-3 ${styles.azkarCard}`}>
+                                <div className="card-body p-0">
+                                    <h3 className={`${styles.textAzkar} card-text lh-lg`}>{text}</h3>
+
+                                    {description && (
+                                        <div className="rounded-3 p-1 badge shadow-sm">
+                                            <p className="mb-0 text-secondary lh-lg">{description}</p>
+                                        </div>
+                                    )}
 
                                     <div className="d-flex justify-content-end align-items-center gap-3 flex-wrap mt-4">
-
                                         <button
                                             className={`btn btn-outline-success btn-sm px-4 fw-bold rounded-pill shadow-sm ${styles.copyBtn}`}
                                             onClick={() => copyToClipboard(text)}
@@ -155,7 +192,11 @@ export default function AzkarPage({ type }) {
                                         </button>
                                     </div>
 
-
+                                    {reference && (
+                                        <p className="text-muted text-end badge shadow-sm bg-light fw-semibold small m-0">
+                                            {reference}
+                                        </p>
+                                    )}
                                 </div>
                             </div>
                         );

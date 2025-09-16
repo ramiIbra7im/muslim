@@ -1,3 +1,4 @@
+"use client";
 import { FaMosque } from "react-icons/fa";
 import styles from "./Countdown.module.css";
 
@@ -5,8 +6,8 @@ export default function Countdown({ nextPrayer, countdown }) {
     if (!nextPrayer) return null;
 
     return (
-        <div className={`card shadow-sm border container col-11  col-sm-8 m-auto p-3 ${styles.countdownCard}`} dir="rtl">
-            <div className={`d-flex align-items-center  justify-content-between gap-3 ${styles.cardContent}`}>
+        <div className={`card shadow-sm border container col-11 col-sm-8 m-auto p-3 ${styles.countdownCard}`} dir="rtl">
+            <div className={`d-flex align-items-center justify-content-between gap-3 ${styles.cardContent}`}>
 
                 {/* صورة البروفايل */}
                 <img
