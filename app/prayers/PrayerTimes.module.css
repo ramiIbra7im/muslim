@@ -1,6 +1,10 @@
 .prayerPage {
     background-color: #F8FFFD;
-    padding-top: 4rem;
+    padding-top: 1rem;
+
+
+    background: url("/islamic.png"), linear-gradient(135deg, #0d1b2a -50%, #1b4332 100%);
+    background-blend-mode: overlay;
 }
 
 .locationCard {

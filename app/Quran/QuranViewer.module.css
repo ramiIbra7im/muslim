@@ -55,11 +55,38 @@
 }
 
 /* البسملة */
+.basmalaWrapper {
+    position: relative;
+    text-align: center;
+    max-width: 100%;
+}
+
 .basmala {
-    font-size: 1.4rem;
-    color: #c59d5f;
-    font-weight: bold;
+    position: relative;
+    display: inline-block;
     font-family: "Amiri Quran", serif;
+    font-weight: bold;
+    color: #c59d5f;
+
+    /* حجم الخط مرن */
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    padding: 1rem 2rem;
+    font-weight: bold;
+
+    /* الخلفية SVG */
+    background: url('/bsmla.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* عرض مرن للخلفية */
+    width: 100%;
+    max-width: 600px;
+    /* أقصى عرض */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 /* نص الآيات */
@@ -80,7 +107,7 @@
 
 .ayahNumber {
     color: #c59d5f;
-  
+
 }
 
 .surahItem {
@@ -121,4 +148,3 @@
     transition: 0.5s all ease;
     color: white;
 }
-

@@ -296,10 +296,11 @@ export default function QuranViewer() {
                     ) : (
                         <div className="bg-light rounded border col-12 col-lg-8 shadow-sm p-2 m-auto ">
                             {basmala && (
-                                <div className="text-center mb-4">
-                                    <span className={styles.basmala}>{basmala}</span>
+                                <div className={styles.basmalaWrapper}>
+                                    <span className={`${styles.basmala} pb-4`}>{basmala}</span>
                                 </div>
                             )}
+
                             <div className={`${styles.ayahContainer} `}>
                                 {verses.map((v) => (
                                     <span key={v.numberInSurah} className={styles.ayah}>
