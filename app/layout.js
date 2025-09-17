@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Sidebar from './components/sidebar/Sidebar';
-import { Cairo, Readex_Pro, El_Messiri } from 'next/font/google';
+import { Readex_Pro, Amiri } from 'next/font/google';
 import styles from './RootLayout.module.css';
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -9,6 +9,11 @@ import "react-toastify/dist/ReactToastify.css";
 const ReadexPro = Readex_Pro({
   subsets: ['arabic'],
   weight: ['400', '700'],
+  display: 'swap',
+});
+const amiri = Amiri({
+  subsets: ['arabic'],
+  weight: ['400', '700'], // حسب احتياجك
   display: 'swap',
 });
 
@@ -24,7 +29,7 @@ export const metadata = {
     title: "نسك المسلم - مواقيت الصلاة والأذكار",
     description:
       "موقع نسك المسلم لعرض مواقيت الصلاة، الأذان، الأذكار والأدعية مع تجربة روحانية مميزة.",
-    url: "https://example.com",
+    url: "https://muslim-rb.vercel.app",
     siteName: "نسك المسلم",
     images: [
       {

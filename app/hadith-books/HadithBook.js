@@ -11,7 +11,7 @@ export default function HadithBook({ slug }) {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
     const [currentPage, setCurrentPage] = useState(1);
-    const itemsPerPage = 5;
+    const itemsPerPage = 10;
 
     const bookNames = {
         bukhari: "صحيح البخاري",
@@ -91,40 +91,39 @@ export default function HadithBook({ slug }) {
         <div>
             <HeroSection title={`أحاديث ${bookNames[slug] || slug}`} />
 
-            <div className={`container-fluid py-4 ${styles.container}`} dir="rtl">
+            <div className={`container-fluid py-4 p-0 ${styles.container}`} dir="rtl">
                 {error && <div className={styles.error}>{error}</div>}
 
                 {!loading && !error && (
                     <>
-                        <div className="d-flex flex-column col-10 m-auto gap-3">
-                            {currentItems.map((h) => (
-                                <div
-                                    key={h.number}
-                                    className={`card p-4 shadow-sm ${styles.hadithCard} ${styles.customGreenBorder}`}
-                                >
-                                    <h5 className={`mb-3 d-flex align-items-center gap-2 fw-bold ${styles.customGreen}`}>
-                                        <BookOpen size={20} /> حديث رقم {h.number}
-                                    </h5>
-                                    <p className={`${styles.content} lh-lg fs-3 text-dark`}>{h.arab}</p>
+                        <div className="row g-4 m-0">
+                            {currentItems.map((h) => (  
+                                <div key={h.number} className="col-12 col-lg-6 d-flex">
+                                    <div className={`card p-4 shadow-sm ${styles.hadithCard} ${styles.customGreenBorder} d-flex flex-column flex-fill`}>
+                                        <h5 className={`mb-3 d-flex align-items-center gap-2 fw-bold ${styles.customGreen}`}>
+                                            <BookOpen size={20} /> حديث رقم {h.number}
+                                        </h5>
+                                        <p className={`${styles.content} lh-lg fs-3 text-dark`}>{h.arab}</p>
 
-                                    {/* أزرار النسخ والمشاركة */}
-                                    <div className="d-flex justify-content-end align-items-center gap-3 flex-wrap mt-3">
-                                        <button
-                                            className={`btn btn-outline-success btn-sm px-3 fw-bold rounded-pill shadow-sm p-1 ${styles.copyBtn}`}
-                                            onClick={() => copyToClipboard(h.arab)}
-                                        >
-                                            نسخ
-                                        </button>
-                                        <button
-                                            className={`btn btn-outline-primary btn-sm px-3 fw-bold rounded-pill shadow-sm ${styles.shareBtn}`}
-                                            onClick={() => shareHadith(h.arab)}
-                                        >
-                                            مشاركة <Share2 size={16} />
-                                        </button>
+                                        <div className="d-flex justify-content-end align-items-center gap-3 flex-wrap mt-auto">
+                                            <button
+                                                className={`btn btn-outline-success btn-sm px-3 fw-bold rounded-pill shadow-sm p-1 ${styles.copyBtn}`}
+                                                onClick={() => copyToClipboard(h.arab)}
+                                            >
+                                                نسخ
+                                            </button>
+                                            <button
+                                                className={`btn btn-outline-primary btn-sm px-3 fw-bold rounded-pill shadow-sm ${styles.shareBtn}`}
+                                                onClick={() => shareHadith(h.arab)}
+                                            >
+                                                مشاركة <Share2 size={16} />
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-                            ))}
+                            ))} 
                         </div>
+
 
                         {/* Pagination */}
                         <div className="d-flex justify-content-center align-items-center gap-2 mt-4 flex-wrap">

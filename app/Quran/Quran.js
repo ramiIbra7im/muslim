@@ -4,6 +4,7 @@ import styles from "./QuranViewer.module.css";
 import QuranCover from "../components/QuranCover";
 import AutoScrollControl from "../components/AutoScrollControl";
 
+
 export default function QuranViewer() {
     const [surahs, setSurahs] = useState([]);
     const [selectedSurah, setSelectedSurah] = useState(null);
@@ -299,7 +300,7 @@ export default function QuranViewer() {
                                     <span className={styles.basmala}>{basmala}</span>
                                 </div>
                             )}
-                            <div className={`${styles.ayahContainer}`}>
+                            <div className={`${styles.ayahContainer} `}>
                                 {verses.map((v) => (
                                     <span key={v.numberInSurah} className={styles.ayah}>
                                         {v.text}{" "}
