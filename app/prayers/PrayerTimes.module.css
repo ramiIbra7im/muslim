@@ -8,7 +8,7 @@
 }
 
 .locationCard {
-    background-color: white;
+    background: linear-gradient(90deg, #ffffff 0%, #ffffff 100%);
     color: #347060;
     transition: all 0.3s ease;
 }
@@ -19,15 +19,17 @@
 }
 
 .timePrayer {
-    background-color: white;
+    background: linear-gradient(90deg, #ffffff 0%, #ffffff 100%);
+    /* أبيض كخلفية عادية */
     color: #347060;
     border-right: 6px solid #18a999;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     min-height: 170px;
 }
 
 .timePrayer:hover {
     background: linear-gradient(90deg, #c8ffd0 0%, #f4fff0 100%);
+    /* جريدينت عند الهوفر */
     transform: scale(1.02);
 }
 

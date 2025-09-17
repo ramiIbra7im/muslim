@@ -52,13 +52,13 @@ export default function Sidebar() {
             )}
 
             {/* الـSidebar */}
-            <nav className={`${styles.sidebar} ${mobileOpen ? styles.mobileOpen : ""}`}>
+            <nav className={`${styles.sidebar} ${mobileOpen ? styles.mobileOpen : ""} `}>
                 <Image
                     src="/logo1.svg"
                     alt="تسك النسلم"
                     width={200} // عرض الصورة
                     height={65} // ارتفاع الصورة
-                // className={styles.title}
+                    className="px-2"
                 />
                 <ul className="nav flex-column w-100 px-2 mt-3">
                     {navItems.map((item) => (
