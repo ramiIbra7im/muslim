@@ -171,32 +171,38 @@ export default function AzkarPage({ type }) {
                                     <h3 className={`${styles.textAzkar} card-text lh-lg`}>{text}</h3>
 
                                     {description && (
-                                        <div className="rounded-3 p-1  shadow-sm">
+                                        <div className="rounded-2 p-1 shadow-sm d-inline-block ">
                                             <p className="mb-0 text-secondary lh-lg">{description}</p>
                                         </div>
                                     )}
 
-                                    <div className="d-flex justify-content-end align-items-center gap-3 flex-wrap mt-4">
-                                        <button
-                                            className={`btn btn-outline-success btn-sm px-4 fw-bold rounded-pill shadow-sm ${styles.copyBtn}`}
-                                            onClick={() => copyToClipboard(text)}
-                                        >
-                                            نسخ
-                                        </button>
-                                        <button
-                                            className={`btn btn-success btn-sm px-4 fw-bold rounded-pill shadow-sm ${styles.countBtn}`}
-                                            onClick={() => decrementCount(idx)}
-                                            disabled={current === 0}
-                                        >
-                                            التكرار: {current}
-                                        </button>
+
+                                    <div className="d-flex justify-content-between align-items-center flex-wrap mt-4">
+                                        {/* الريفرنس */}
+                                        {reference && (
+                                            <p className="text-muted badge shadow-sm bg-light fw-semibold small m-0">
+                                                {reference}
+                                            </p>
+                                        )}
+
+                                        {/* الأزرار */}
+                                        <div className="d-flex align-items-center gap-3">
+                                            <button
+                                                className={`btn btn-outline-success btn-sm px-4 fw-bold rounded-pill shadow-sm ${styles.copyBtn}`}
+                                                onClick={() => copyToClipboard(text)}
+                                            >
+                                                نسخ
+                                            </button>
+                                            <button
+                                                className={`btn btn-success btn-sm px-4 fw-bold rounded-pill shadow-sm ${styles.countBtn}`}
+                                                onClick={() => decrementCount(idx)}
+                                                disabled={current === 0}
+                                            >
+                                                التكرار: {current}
+                                            </button>
+                                        </div>
                                     </div>
 
-                                    {reference && (
-                                        <p className="text-muted text-end badge shadow-sm bg-light fw-semibold small m-0">
-                                            {reference}
-                                        </p>
-                                    )}
                                 </div>
                             </div>
                         );

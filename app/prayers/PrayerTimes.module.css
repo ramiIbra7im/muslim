@@ -23,6 +23,7 @@
     color: #347060;
     border-right: 6px solid #18a999;
     transition: all 0.3s ease;
+    min-height: 170px;
 }
 
 .timePrayer:hover {
@@ -52,18 +53,31 @@
 }
 
 .iconCircle {
-    position: absolute;
-    top: 10px;
-    right: 10px;
     background-color: #52AA9920;
-    /* background-color: #28a745; */
-    /* أخضر موحد */
     color: #3F8755;
-    width: 36px;
-    height: 36px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* للكارت */
+.prayer-card {
+    min-height: 120px;
+    transition: all 0.3s ease;
+}
+
+.prayer-card:hover {
+    transform: translateY(-4px);
+}
+
+/* للأيقونة */
+.prayer-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #52aa9920;
+    border-radius: 12px;
 }

@@ -175,18 +175,14 @@ export default function PrayerTimes() {
                 <div className="row g-3 m-auto">
                     <div className="col-sm-4">
                         <div className={`${styles.locationCard} border shadow-sm rounded text-center py-3 h-100 d-flex flex-column justify-content-center align-items-center`}>
-                            <div className={styles.iconCircle}>
-                                <FaCity size={18} />
-                            </div>
+
                             <h2 className="mb-0 fw-bold">{currentLocation.city} - {currentLocation.country}</h2>
                         </div>
                     </div>
 
                     <div className="col-sm-4">
                         <div className={`${styles.locationCard} border shadow-sm rounded text-center h-100 py-3 d-flex flex-column justify-content-center align-items-center`}>
-                            <div className={styles.iconCircle}>
-                                <FaClock size={18} />
-                            </div>
+
                             {localTime && (
                                 <h2 className="mb-0 fw-bold">
                                     الوقت الحالي:<br />
@@ -199,18 +195,14 @@ export default function PrayerTimes() {
                     {dateInfo && (
                         <div className="col-sm-4 d-flex flex-column gap-3">
                             <div className={`${styles.locationCard} border shadow-sm rounded text-center p-3 d-flex flex-column justify-content-center align-items-center`}>
-                                <div className={styles.iconCircle}>
-                                    <FaCalendarAlt size={16} />
-                                </div>
+
                                 <p className="mb-0 fw-bold">
                                     <strong>الميلادي:</strong> {dateInfo.gregorian?.date}
                                 </p>
                             </div>
 
                             <div className={`${styles.locationCard} border shadow-sm rounded text-center p-3 d-flex flex-column justify-content-center align-items-center`}>
-                                <div className={styles.iconCircle}>
-                                    <FaMoon size={16} />
-                                </div>
+
                                 <p className="mb-0 fw-bold">
                                     <strong>الهجري:</strong> {dateInfo.hijri?.date}
                                 </p>
@@ -256,29 +248,25 @@ export default function PrayerTimes() {
                                 return (
                                     <div key={idx} className="col-12 col-sm-6 col-md-4 px-2">
                                         <div
-                                            className={`${styles.timePrayer} p-4 rounded-4 shadow-sm d-flex justify-content-between align-items-center h-100`}
-                                            style={{ minHeight: "100px" }}
+                                            className={`${styles.timePrayer} p-3 rounded-4 shadow-sm d-flex flex-column justify-content-between h-100 prayer-card`}
                                         >
-                                            <div className="d-flex align-items-center">
-                                                <div
-                                                    style={{
-                                                        width: "40px",
-                                                        height: "40px",
-                                                        background: "#52AA9920",
-                                                        borderRadius: "50%",
-                                                        display: "flex",
-                                                        alignItems: "center",
-                                                        justifyContent: "center",
-                                                        marginLeft: "8px"
-                                                    }}
-                                                >
+                                            {/* الأيقونة فوق اليمين */}
+                                            <div className="d-flex justify-content-start">
+                                                <div className={styles.iconCircle}>
                                                     {getIcon()}
                                                 </div>
-                                                <h5 className="mb-0 fw-bold">{translatePrayer(name)}</h5>
                                             </div>
-                                            <span className="fw-bold">{formatTo12Hour(time)}</span>
+
+
+                                            {/* الاسم والوقت تحت بالنص */}
+                                            <div className="text-center mt-3">
+                                                <h3 className="mb-2 fw-bold">{translatePrayer(name)}</h3>
+                                                <span className="fw-bold fs-5">{formatTo12Hour(time)}</span>
+                                            </div>
                                         </div>
                                     </div>
+
+
                                 );
                             })}
                 </div>
