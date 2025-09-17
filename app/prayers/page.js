@@ -172,7 +172,7 @@ export default function PrayerTimes() {
             <Notification times={times} />
 
             {currentLocation.city && (
-                <div className="row g-3 m-auto">
+                <div className="row  m-auto">
                     <div className="col-sm-4">
                         <div className={`${styles.locationCard} border shadow-sm rounded text-center py-3 h-100 d-flex flex-column justify-content-center align-items-center`}>
 
@@ -213,7 +213,7 @@ export default function PrayerTimes() {
             )}
 
 
-            <div className="mt-4 col-lg-4 m-auto">
+            <div className="mt-2 col-lg-4 m-auto">
                 <LocationSearch onSelectCity={(city, country) => fetchPrayerTimes(0, 0, city, country)} />
             </div>
 
@@ -221,8 +221,8 @@ export default function PrayerTimes() {
 
 
 
-            <div dir="rtl" className="container mt-4">
-                <div className="row g-3">
+            <div dir="rtl" className="container mt-3">
+                <div className="row ">
                     {times &&
                         Object.entries(times)
                             .filter(([key]) => ["Fajr", "Dhuhr", "Asr", "Maghrib", "Isha"].includes(key))
@@ -246,7 +246,7 @@ export default function PrayerTimes() {
                                 };
 
                                 return (
-                                    <div key={idx} className="col-12 col-sm-6 col-md-4 px-2">
+                                    <div key={idx} className="col-12 col-sm-6 col-md-4 px-2 mb-4">
                                         <div
                                             className={`${styles.timePrayer} p-3 rounded-4 shadow-sm d-flex flex-column justify-content-between h-100 prayer-card`}
                                         >

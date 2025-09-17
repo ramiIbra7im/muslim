@@ -43,6 +43,8 @@
     top: 1rem;
     right: 1rem;
     z-index: 1040;
+    background-color: #347060 !important;
+    color: white !important;
 }
 
 /* الموبايل */

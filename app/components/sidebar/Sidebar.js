@@ -36,7 +36,7 @@ export default function Sidebar() {
         <>
             {/* زر التوجل للموبايل */}
             <button
-                className={`btn btn-primary d-md-none ${styles.mobileToggle}`}
+                className={`btn  d-md-none ${styles.mobileToggle}`}
                 onClick={() => setMobileOpen(true)}
             >
                 <FaBars />

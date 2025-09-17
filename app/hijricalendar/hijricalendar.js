@@ -13,7 +13,7 @@ const hijriMonths = [
     "رمضان", "شوال", "ذو القعدة", "ذو الحجة"
 ];
 
-const hijriDays = ["السبت", "الأحد", "الإثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة"];
+const hijriDays = ["س", "ح", "ن", "ث", "ر", "خ", "ج"];
 const allowedEvents = ["Eid", "Ramadan", "Hajj", "Mawlid"];
 
 const translateEvent = (eventName) => {
