@@ -1,0 +1,47 @@
+.footer {
+    background: linear-gradient(90deg, #39b398 0%, #347060 100%);
+    color: #eee;
+    padding: 2rem 1rem 1rem;
+}
+
+.title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 0.8rem;
+}
+
+.text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #f1f1f1;
+    padding: 10px;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+}
+
+.social {
+    font-size: 1.5rem;
+}
+
+.social a {
+    color: #eee;
+    transition: color 0.3s;
+}
+
+.social a:hover {
+    color: #52AA99;
+}
+
+.copy {
+    border-top: 1px solid #444;
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    font-size: 0.85rem;
+    color: #ffffff;
+    font-weight: bold;
+}

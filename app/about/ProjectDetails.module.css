@@ -1,0 +1,123 @@
+.cardHover {
+    border-radius: 16px;
+    border: 1px solid #e0dff5;
+    background-color: #f9f7ff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1rem;
+}
+
+.cardHover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #57B398;
+    /* اللون الرئيسي */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.cardTitle {
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    color: #57B398;
+    /* اللون الرئيسي للعناوين */
+}
+
+.cardSubtitle {
+    font-size: 1rem;
+    color: #B38A50;
+    /* لون ثانوي */
+    margin-bottom: 0.6rem;
+    font-weight: bold;
+}
+
+.cardText {
+    font-size: 0.9rem;
+    color: #333;
+    min-height: 50px;
+}
+
+.linkButton {
+    display: inline-block;
+    margin-top: 0.6rem;
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: #57B398;
+    /* لون مميز للزر */
+    border-radius: 12px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.linkButton:hover {
+    background-color: #b38a50;
+    transform: scale(1.05);
+}
+
+.badgeActive {
+    background-color: green;
+    /* اللون الأخضر الفاتح */
+    color: #fff;
+}
+
+.badgeError {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.badgeChecking {
+    background-color: #C59D5F;
+    /* لون متوسط */
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.toolList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0;
+    list-style: none;
+}
+
+.toolItem {
+    flex: 1 0 auto;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.75rem;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    color: #fff;
+    background-color: #347060;
+    /* اللون الموحد */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.toolItem:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    opacity: 0.9;
+}

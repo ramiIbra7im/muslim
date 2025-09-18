@@ -172,7 +172,7 @@ export default function PrayerTimes() {
             <Notification times={times} />
 
             {currentLocation.city && (
-                <div className="row  m-auto">
+                <div className="row  m-auto g-3 ">
                     <div className="col-sm-4">
                         <div className={`${styles.locationCard} border shadow-sm rounded text-center py-3 h-100 d-flex flex-column justify-content-center align-items-center`}>
 

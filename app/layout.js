@@ -4,6 +4,7 @@ import { Readex_Pro, Amiri } from 'next/font/google';
 import styles from './RootLayout.module.css';
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Footer from './components/footer/footer';
 
 // الخطوط
 const ReadexPro = Readex_Pro({
@@ -66,7 +67,10 @@ export default function RootLayout({ children }) {
           <Sidebar />
 
           {/* المحتوى الرئيسي */}
-          <main className={styles.mainContent}>{children}</main>
+          <main className={styles.mainContent}>
+            {children}
+            <Footer />
+          </main>
         </div>
 
         {/* Toast Container يظهر في كل الصفحات */}

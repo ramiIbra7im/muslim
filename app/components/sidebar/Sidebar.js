@@ -12,7 +12,9 @@ import Image from "next/image"; import {
     FaBook,
     FaCalendarAlt,
     FaCoins,
-    FaBars
+    FaBars,
+    FaInfoCircle,
+    FaPersonBooth
 } from "react-icons/fa";
 
 export default function Sidebar() {
@@ -30,6 +32,7 @@ export default function Sidebar() {
         { href: "/hadith-books", icon: <FaBook />, label: "احاديث", key: "hadith-books" },
         { href: "/hijricalendar", icon: <FaCalendarAlt />, label: "التقويم الهجري", key: "hijricalendar" },
         { href: "/zakat", icon: <FaCoins />, label: "حساب الزكاة", key: "zakat" },
+        { href: "/about", icon: <FaInfoCircle />, label: "عن الموقع", key: "about" },
     ];
 
     return (
